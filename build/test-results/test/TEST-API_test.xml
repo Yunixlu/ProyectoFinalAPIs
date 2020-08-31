@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="API_test" tests="15" skipped="0" failures="0" errors="0" timestamp="2020-08-31T17:31:07" hostname="MacBook-Pro-de-Sergio-2.local" time="24.168">
+  <properties/>
+  <testcase name="t01_get_token_fail" classname="API_test" time="8.286"/>
+  <testcase name="t02_get_token_correct" classname="API_test" time="1.611"/>
+  <testcase name="t03_create_user_fail" classname="API_test" time="0.245"/>
+  <testcase name="t04_create_user" classname="API_test" time="1.04"/>
+  <testcase name="t05_update_phone_number" classname="API_test" time="0.927"/>
+  <testcase name="t06_add_new_add_fail" classname="API_test" time="0.247"/>
+  <testcase name="t07_add_new_ad" classname="API_test" time="3.755"/>
+  <testcase name="t08_update_ad" classname="API_test" time="4.111"/>
+  <testcase name="t09_get_address_fail" classname="API_test" time="0.274"/>
+  <testcase name="t10_user_has_no_address" classname="API_test" time="1.527"/>
+  <testcase name="t11_update_user_address" classname="API_test" time="0.29"/>
+  <testcase name="t12_update_user_address_duplicated" classname="API_test" time="0.515"/>
+  <testcase name="t13_get_created_address" classname="API_test" time="0.317"/>
+  <testcase name="t14_shop_not_found" classname="API_test" time="0.296"/>
+  <testcase name="t15_delete_ad" classname="API_test" time="0.724"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://webapi.segundamano.mx/nga/api/v1.1/private/accounts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Status expected: 400
+Result: 400
+Error Code expected: VALIDATION FAILED 
+Result: VALIDATION_FAILED
+Body not null: {"error":{"causes":[{"code":"ERROR_AUTH_LOGIN","field":"Authorization","label":"Has introducido un nombre de usuario o contraseña incorrecta","object":"header"}],"code":"VALIDATION_FAILED"}}Request method:	POST
+Request URI:	https://webapi.segundamano.mx/nga/api/v1.1/private/accounts?lang=es
+Proxy:			<none>
+Request params:	<none>
+Query params:	lang=es
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic bHAubHVsdTc3QGdtYWlsLmNvbTpQdWdCM3J0MC4uLiFf
+				Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+mc1xf430a41b46927ced7f8791ee744ac26363908e87_v2
+/private/accounts/10805975
+Agente 77
+f786ea2a-d685-40ce-8dae-6282b760e317
+10805975
+Status expected: 200
+Result: 200
+Token: bHAubHVsdTc3QGdtYWlsLmNvbTpQdWdCM3J0MC4uLiFf
+Request method:	POST
+Request URI:	https://webapi.segundamano.mx/nga/api/v1.1/private/accounts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "account": {
+        "email": "agente6901.0@mailinator.com"
+    }
+}
+Status expected: 400
+Result: 400
+VALIDATION_FAILED
+Body not null: {"error":{"causes":[{"code":"ERROR_AUTH_LOGIN","field":"Authorization","label":"Has introducido un nombre de usuario o contraseña incorrecta","object":"header"}],"code":"VALIDATION_FAILED"}}Request method:	POST
+Request URI:	https://webapi.segundamano.mx/nga/api/v1.1/private/accounts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YWdlbnRlOTQyLjBAbWFpbGluYXRvci5jb206NjU1NjkuMA==
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "account": {
+        "email": "agente942.0@mailinator.com"
+    }
+}
+Status expected: 401
+Result: 401
+Body not null: {"error":{"code":"ACCOUNT_VERIFICATION_REQUIRED"}}Request method:	PATCH
+Request URI:	https://webapi.segundamano.mx/nga/api/v1.1/private/accounts/10805975
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=tag:scmcoord.com,2013:api mc1xf430a41b46927ced7f8791ee744ac26363908e87_v2
+				Accept=application/json, text/plain, */*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "account": {
+        "name": "Agente 77",
+        "phone": "1031578912",
+        "phone_hidden": true
+    }
+}
+Status expected: 200
+Result: 200
+Body not null: {"account":{"account_id":"/private/accounts/10805975","can_publish":true,"email":"lp.lulu77@gmail.com","locations":[],"name":"Agente 77","phone":"1031578912","phone_hidden":true,"professional":false,"rfc":"CASA681225XXX","uuid":"f786ea2a-d685-40ce-8dae-6282b760e317"}}NameAgente 77
+Request method:	POST
+Request URI:	https://webapi.segundamano.mx/nga/api/v1/private/accounts/10805975/klfst
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=tag:scmcoord.com,2013:api Zjc4NmVhMmEtZDY4NS00MGNlLThkYWUtNjI4MmI3NjBlMzE3Om1jMXhmNDMwYTQxYjQ2OTI3Y2VkN2Y4NzkxZWU3NDRhYzI2MzYzOTA4ZTg3X3Yy
+				x-nga-source=PHOENIX_DESKTOP
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ad": {
+        "locations": [
+            {
+                "code": "5",
+                "key": "region",
+                "label": "Baja California Sur",
+                "locations": [
+                    {
+                        "code": "51",
+                        "key": "municipality",
+                        "label": "Comondú",
+                        "locations": [
+                            {
+                                "code": "3748",
+                                "key": "area",
+                                "label": "4 de Marzo"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "subject": "Paseo perros a domicilio",
+        "body": "Para su comodidad, paseo perros en su domicilio, use la promoción 1.0776254055689275E9",
+        "category": {
+            "code": "3042"
+        },
+        "images": [
+            
+        ],
+        "price": {
+            "currency": "mxn",
+            "price_value": 1
+        },
+        "ad_details": {
+            
+        },
+        "phone_hidden": 1,
+        "plate": "",
+        "vin": "",
+        "type": {
+            "code": "s",
+            "label": ""
+        },
+        "ad": "Paseo perros a domicilio"
+    },
+    "category_suggestion": false,
+    "commit": true
+}
+Status expected: 401
+Result: 401
+Error Code expected: UNAUTHORIZED 
+Result: UNAUTHORIZED
+Body not null: {"error":{"code":"UNAUTHORIZED"}}Request method:	POST
+Request URI:	https://webapi.segundamano.mx/accounts/f786ea2a-d685-40ce-8dae-6282b760e317/up
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic Zjc4NmVhMmEtZDY4NS00MGNlLThkYWUtNjI4MmI3NjBlMzE3Om1jMXhmNDMwYTQxYjQ2OTI3Y2VkN2Y4NzkxZWU3NDRhYzI2MzYzOTA4ZTg3X3Yy
+				x-source=PHOENIX_DESKTOP
+				Accept=application/json, text/plain, */*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "category": "8041",
+    "subject": "Servicio de consultoria",
+    "body": "Consultoría de arquitectos a tus ordenes, pregunta por nuestros servicios",
+    "price": "1",
+    "region": "28",
+    "municipality": "1963",
+    "area": "83521",
+    "phone_hidden": "true"
+}
+Body: {"data":{"ad":{"ad_id":"68419894","subject":"Servicio de consultoria","category":{"code":"8041","label":"Arquitectos","parent":{"code":"8040","label":"Profesionales","parent":{"code":"8000","label":"Servicios"}}},"region":{"code":"28","label":"Sonora"},"municipality":{"code":"1963","label":"Soyopa"},"area":{"code":"83521","label":"La Estrella"},"price":{"currency":"MXN","value":1}},"payment_info":{"payment_required":false,"title":"¡Listo! Tu anuncio está en revisión.","description":"Destácalo y obtén más contactos.","products":[{"id":"","name":"Anuncio sin destacar","description":"Tu anuncio gratis, sin destacarlo.","most_popular":false},{"id":"serv_premiumpackage_1","name":"Subir Diario","label":"Recibe hasta 6 veces más contactos","description":"Sube tu anuncio todos los días durante 7 días","most_popular":true,"price":120},{"id":"serv_premiumpackage_2","name":"Subir diario y Posición principal","label":"Recibe hasta 12 veces más contactos","description":"Sube tu anuncio todos los días durante 7 días y pon tu anuncio en la primera posición durante 3 días","most_popular":false,"price":220}]}}}
+Status expected: 200
+Result: 200
+Ad Created with id: 68419894
+Body not null: {"data":{"ad":{"ad_id":"68419894","subject":"Servicio de consultoria","category":{"code":"8041","label":"Arquitectos","parent":{"code":"8040","label":"Profesionales","parent":{"code":"8000","label":"Servicios"}}},"region":{"code":"28","label":"Sonora"},"municipality":{"code":"1963","label":"Soyopa"},"area":{"code":"83521","label":"La Estrella"},"price":{"currency":"MXN","value":1}},"payment_info":{"payment_required":false,"title":"¡Listo! Tu anuncio está en revisión.","description":"Destácalo y obtén más contactos.","products":[{"id":"","name":"Anuncio sin destacar","description":"Tu anuncio gratis, sin destacarlo.","most_popular":false},{"id":"serv_premiumpackage_1","name":"Subir Diario","label":"Recibe hasta 6 veces más contactos","description":"Sube tu anuncio todos los días durante 7 días","most_popular":true,"price":120},{"id":"serv_premiumpackage_2","name":"Subir diario y Posición principal","label":"Recibe hasta 12 veces más contactos","description":"Sube tu anuncio todos los días durante 7 días y pon tu anuncio en la primera posición durante 3 días","most_popular":false,"price":220}]}}}Request method:	POST
+Request URI:	https://webapi.segundamano.mx/nga/api/v1/private/accounts/10805975/klfst/68419894/actions
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=tag:scmcoord.com,2013:api mc1xf430a41b46927ced7f8791ee744ac26363908e87_v2
+				x-nga-source=PHOENIX_DESKTOP
+				Accept=application/json, text/plain, */*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ad": {
+        "locations": [
+            {
+                "code": "5",
+                "key": "region",
+                "label": "Baja California Sur",
+                "locations": [
+                    {
+                        "code": "51",
+                        "key": "municipality",
+                        "label": "Comondú",
+                        "locations": [
+                            {
+                                "code": "3748",
+                                "key": "area",
+                                "label": "4 de Marzo"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "subject": "Paseo perros a domicilio",
+        "body": "Para su comodidad, paseo perros en su domicilio, use la promoción 1.0235385263425661E9",
+        "category": {
+            "code": "3042"
+        },
+        "images": [
+            
+        ],
+        "price": {
+            "currency": "mxn",
+            "price_value": 1
+        },
+        "ad_details": {
+            
+        },
+        "phone_hidden": 1,
+        "plate": "",
+        "vin": "",
+        "type": {
+            "code": "s",
+            "label": ""
+        },
+        "ad": "Paseo perros a domicilio"
+    },
+    "category_suggestion": false,
+    "commit": true
+}
+Status expected: 201
+Result: 201
+Action expected to be: edit 
+Result: edit
+Body not null: {"action":{"action_id":"/private/accounts/10805975/ads/68419894/actions/2","action_type":"edit"},"ad":{"ad_id":"/private/accounts/10805975/ads/68419894","subject":"Paseo perros a domicilio"}}Request method:	GET
+Request URI:	https://webapi.segundamano.mx/addresses/v1/get
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic mc1xf430a41b46927ced7f8791ee744ac26363908e87_v2
+				Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Status expected: 403
+Result: 403
+Error Code expected: Authorization failed 
+Result: Authorization failed
+Body not null: {"error":"Authorization failed"}Request method:	POST
+Request URI:	https://webapi.segundamano.mx/nga/api/v1.1/private/accounts?lang=es
+Proxy:			<none>
+Request params:	<none>
+Query params:	lang=es
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic bXAyOTA2MDA4QGdtYWlsLmNvbTpWM3JkM01pbC4hXw==
+				Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+mc1x6a597fb9a2802c8017473e3e5f9c192a577c16e3_v2
+bccfa67c-6bd6-4fa5-84b2-30fe7a8a85cc
+Request method:	GET
+Request URI:	https://webapi.segundamano.mx/addresses/v1/get
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YmNjZmE2N2MtNmJkNi00ZmE1LTg0YjItMzBmZTdhOGE4NWNjOm1jMXg2YTU5N2ZiOWEyODAyYzgwMTc0NzNlM2U1ZjljMTkyYTU3N2MxNmUzX3Yy
+				Accept=application/json, text/plain, */*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Status expected: 200
+Result: 200
+List expected to be empty 
+Result: [:]
+Body not null: {"access_token":"mc1x6a597fb9a2802c8017473e3e5f9c192a577c16e3_v2","account":{"account_id":"/private/accounts/10836488","can_publish":true,"email":"mp2906008@gmail.com","locations":[],"name":"Agente ventas 007","phone":"9876521667","phone_hidden":false,"professional":false,"rfc":"","uuid":"bccfa67c-6bd6-4fa5-84b2-30fe7a8a85cc"},"ad_events":{"24h":{"calls":0,"mails":0,"phone_views":0,"views":0},"7d":{"calls":0,"mails":0,"phone_views":0,"views":0},"total":{"calls":0,"mails":0,"phone_views":0,"views":0}},"token_type":"tag:scmcoord.com,2013:api"}/private/accounts/10836488
+User: 10836488
+Agente ventas 007
+Request method:	POST
+Request URI:	https://webapi.segundamano.mx/addresses/v1/create
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	contact=Casa grande
+				phone=3234445555
+				rfc=CASA681225XXX
+				zipCode=45050
+				exteriorInfo=exterior 10
+				region=18
+				municipality=904
+				area=93179
+				alias=big house
+Path params:	<none>
+Headers:		Authorization=Basic Zjc4NmVhMmEtZDY4NS00MGNlLThkYWUtNjI4MmI3NjBlMzE3Om1jMXhmNDMwYTQxYjQ2OTI3Y2VkN2Y4NzkxZWU3NDRhYzI2MzYzOTA4ZTg3X3Yy
+				Accept=application/json, text/plain, * /*
+				Content-Type=application/x-www-form-urlencoded; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Body address: {"addressID":"8ff3a104-ebae-11ea-9315-ef6b18c8859a"}
+Status expected: 201
+Result: 201
+Address created with ID: 8ff3a104-ebae-11ea-9315-ef6b18c8859a
+Body not null: {"addressID":"8ff3a104-ebae-11ea-9315-ef6b18c8859a"}Request method:	POST
+Request URI:	https://webapi.segundamano.mx/addresses/v1/create
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	contact=Casa grande
+				phone=3234445555
+				rfc=CASA681225XXX
+				zipCode=45050
+				exteriorInfo=exterior 10
+				region=18
+				municipality=904
+				area=93179
+				alias=big house
+Path params:	<none>
+Headers:		Authorization=Basic Zjc4NmVhMmEtZDY4NS00MGNlLThkYWUtNjI4MmI3NjBlMzE3Om1jMXhmNDMwYTQxYjQ2OTI3Y2VkN2Y4NzkxZWU3NDRhYzI2MzYzOTA4ZTg3X3Yy
+				Accept=application/json, text/plain, * /*
+				Content-Type=application/x-www-form-urlencoded; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Body{"addressID":"ce9b5202-ebaf-11ea-b3d9-434120c51b88"}
+Status expected: 201
+Result: 201
+Body not null: {"addressID":"ce9b5202-ebaf-11ea-b3d9-434120c51b88"}Request method:	GET
+Request URI:	https://webapi.segundamano.mx/addresses/v1/get
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic Zjc4NmVhMmEtZDY4NS00MGNlLThkYWUtNjI4MmI3NjBlMzE3Om1jMXhmNDMwYTQxYjQ2OTI3Y2VkN2Y4NzkxZWU3NDRhYzI2MzYzOTA4ZTg3X3Yy
+				Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Status expected: 200
+Result: 200
+Request expected to contain addressID: [769dc1ee-eb18-11ea-b3d9-df6ff4a25e59:[exteriorInfo:exterior 10, interiorInfo:, region:18, municipality:904, area:93179, alias:big house, contact:Casa grande, phone:3234445555, zipCode:45050], c8acd964-eb1a-11ea-8f3c-b302068b9825:[exteriorInfo:exterior 10, interiorInfo:, region:18, municipality:904, area:93179, alias:big house, contact:Casa grande, phone:3234445555, zipCode:45050], b3b6924c-eb1b-11ea-8f3c-173bed286319:[exteriorInfo:exterior 10, interiorInfo:, region:18, municipality:904, area:93179, alias:big house, contact:Casa grande, phone:3234445555, zipCode:45050], 7e62b2dc-eb1c-11ea-8f3c-7b9aecd56baa:[exteriorInfo:exterior 10, interiorInfo:, region:18, municipality:904, area:93179, alias:big house, contact:Casa grande, phone:3234445555, zipCode:45050], 2127b670-eb1d-11ea-b029-ab90c9f342c4:[exteriorInfo:exterior 10, interiorInfo:, region:18, municipality:904, area:93179, alias:big house, contact:Casa grande, phone:3234445555, zipCode:45050], c9a5d8ea-eb1d-11ea-b029-0f8392901378:[exteriorInfo:exterior 10, interiorInfo:, region:18, municipality:904, area:93179, alias:big house, contact:Casa grande, phone:3234445555, zipCode:45050], 012dfae0-eb1e-11ea-9315-47edf98228d9:[exteriorInfo:exterior 10, interiorInfo:, region:18, municipality:904, area:93179, alias:big house, contact:Casa grande, phone:3234445555, zipCode:45050], 3b59355e-eb1e-11ea-b3d9-271cd082cf97:[exteriorInfo:exterior 10, interiorInfo:, region:18, municipality:904, area:93179, alias:big house, contact:Casa grande, phone:3234445555, zipCode:45050], 8ff3a104-ebae-11ea-9315-ef6b18c8859a:[exteriorInfo:exterior 10, interiorInfo:, region:18, municipality:904, area:93179, alias:big house, contact:Casa grande, phone:3234445555, zipCode:45050], ce9b5202-ebaf-11ea-b3d9-434120c51b88:[exteriorInfo:exterior 10, interiorInfo:, region:18, municipality:904, area:93179, alias:big house, contact:Casa grande, phone:3234445555, zipCode:45050]]
+Body not null: {"addresses":{"769dc1ee-eb18-11ea-b3d9-df6ff4a25e59":{"exteriorInfo":"exterior 10","interiorInfo":"","region":18,"municipality":904,"area":93179,"alias":"big house","contact":"Casa grande","phone":"3234445555","zipCode":"45050"},"c8acd964-eb1a-11ea-8f3c-b302068b9825":{"exteriorInfo":"exterior 10","interiorInfo":"","region":18,"municipality":904,"area":93179,"alias":"big house","contact":"Casa grande","phone":"3234445555","zipCode":"45050"},"b3b6924c-eb1b-11ea-8f3c-173bed286319":{"exteriorInfo":"exterior 10","interiorInfo":"","region":18,"municipality":904,"area":93179,"alias":"big house","contact":"Casa grande","phone":"3234445555","zipCode":"45050"},"7e62b2dc-eb1c-11ea-8f3c-7b9aecd56baa":{"exteriorInfo":"exterior 10","interiorInfo":"","region":18,"municipality":904,"area":93179,"alias":"big house","contact":"Casa grande","phone":"3234445555","zipCode":"45050"},"2127b670-eb1d-11ea-b029-ab90c9f342c4":{"exteriorInfo":"exterior 10","interiorInfo":"","region":18,"municipality":904,"area":93179,"alias":"big house","contact":"Casa grande","phone":"3234445555","zipCode":"45050"},"c9a5d8ea-eb1d-11ea-b029-0f8392901378":{"exteriorInfo":"exterior 10","interiorInfo":"","region":18,"municipality":904,"area":93179,"alias":"big house","contact":"Casa grande","phone":"3234445555","zipCode":"45050"},"012dfae0-eb1e-11ea-9315-47edf98228d9":{"exteriorInfo":"exterior 10","interiorInfo":"","region":18,"municipality":904,"area":93179,"alias":"big house","contact":"Casa grande","phone":"3234445555","zipCode":"45050"},"3b59355e-eb1e-11ea-b3d9-271cd082cf97":{"exteriorInfo":"exterior 10","interiorInfo":"","region":18,"municipality":904,"area":93179,"alias":"big house","contact":"Casa grande","phone":"3234445555","zipCode":"45050"},"8ff3a104-ebae-11ea-9315-ef6b18c8859a":{"exteriorInfo":"exterior 10","interiorInfo":"","region":18,"municipality":904,"area":93179,"alias":"big house","contact":"Casa grande","phone":"3234445555","zipCode":"45050"},"ce9b5202-ebaf-11ea-b3d9-434120c51b88":{"exteriorInfo":"exterior 10","interiorInfo":"","region":18,"municipality":904,"area":93179,"alias":"big house","contact":"Casa grande","phone":"3234445555","zipCode":"45050"}}}Request method:	GET
+Request URI:	https://webapi.segundamano.mx/shops/api/v2/public/accounts/10613126/shop
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Status expected: 404
+Result: 404
+Error Code expected: Account not found 
+Result: Account not found
+Body not null: {"status":404,"message":"Account not found"}
+Request method:	DELETE
+Request URI:	https://webapi.segundamano.mx/nga/api/v1/private/accounts/10805975/klfst/68419894
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=tag:scmcoord.com,2013:api mc1xf430a41b46927ced7f8791ee744ac26363908e87_v2
+				x-nga-source=PHOENIX_DESKTOP
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "delete_reason": {
+        "code": "5"
+    }
+}
+Status expected: 200 o 403
+Result: 403
+Body not null: {"error":{"causes":[{"code":"ERROR_AD_ALREADY_DELETED","label":"ERROR_AD_ALREADY_DELETED","object":"query_string"}],"code":"FORBIDDEN"}}]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>
